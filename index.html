@@ -1,15 +1,24 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="./csyes/veggies.css">
-    </head>
-    <body style="background: url('https://solidstarts.com/wp-content/uploads/Bok-Choy-for-Babies-scaled.jpg')">
-        <h1 style="color:rgb(67, 28, 175)">This text would be big</h1>
-        <p>
-            Some normal looking text
-        </p> 
-        <div class="pulse">broccoli</div>
-        <div class="pulse">broccoli</div>
-        <div class="partBroccoli moveBroccoli">
-        </div>
-    </body>
+
+<head>
+    <link rel="stylesheet" href="./csyes/veggies.css">
+    <script>
+        function showVirus() {
+            alert("you have obtained a virus :)");
+
+            document.getElementById('virusIndividual').removeAttribute('hidden')
+        }
+    </script>
+</head>
+
+<body style="background: url('https://solidstarts.com/wp-content/uploads/Bok-Choy-for-Babies-scaled.jpg')">
+    <img id="virusIndividual" hidden src="https://www.missioncriticalmagazine.com/ext/resources/images/2020/Virus-main.jpg?1598279083" />
+    <button type="button" onclick="showVirus()">the vibes are strong within the soul </button>
+    <h1 style="color:rgb(3, 255, 188)">This text would be big</h1>
+    <p>
+        Some normal looking text
+    </p>
+    <div class="partBroccoli moveBroccoli"></div>
+</body>
+
 </html>
