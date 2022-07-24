@@ -8,12 +8,34 @@
 
             document.getElementById('virusIndividual').removeAttribute('hidden')
         }
+        function changeColours() {
+            // todo: generate 3 numbers between 0 to 255 (inclusive)
+            // we will use that to make an rgb value (eg: rgb(255,255,255))
+
+            // I desire: 0 - 255 inclusive (integers)
+            const r = Math.floor(Math.random()*256)
+            const g = Math.floor(Math.random()*256)
+            const b = Math.floor(Math.random()*256)
+            
+            const rainbows = document.getElementById('rainbows');
+
+
+            // 1. String concatenation: YUCK```````````````````````````
+            // const btnStyles = 'background-color: rbg(' + Math.floor(Math.random()*256) + ',' + Math.floor(Math.random()*256) + ',' 
+
+            // 2. Inline strings!
+            const btnStyles = `background-color: rgb(${r}, ${g}, ${b})`;
+            // ^ this evaluates to: "background-color: rgb(3, 255, 188)"
+
+            rainbows.setAttribute('style', btnStyles)
+        }
     </script>
 </head>
 
 <body style="background: url('https://solidstarts.com/wp-content/uploads/Bok-Choy-for-Babies-scaled.jpg')">
     <img id="virusIndividual" hidden src="https://www.missioncriticalmagazine.com/ext/resources/images/2020/Virus-main.jpg?1598279083" />
     <button type="button" onclick="showVirus()">the vibes are strong within the soul </button>
+    <button type="button" id="rainbows" onclick="changeColours()">hello i am button</button>
     <h1 style="color:rgb(3, 255, 188)">This text would be big</h1>
     <p>
         Some normal looking text
