@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="./csyes/veggies.css">
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <script>
+        function hideBroccoli() {
+            document.getElementById('broccoli').setAttribute('hidden', true)
+        }
         function showVirus() {
             alert("you have obtained a virus :)");
 
@@ -37,11 +40,12 @@
     <img id="virusIndividual" hidden src="https://www.missioncriticalmagazine.com/ext/resources/images/2020/Virus-main.jpg?1598279083" />
     <button type="button" onclick="showVirus()">the vibes are strong within the soul </button>
     <button type="button" id="rainbows" onclick="changeColours()">hello i am button</button>
+    <button type="button" id="noBroccoli" onclick="hideBroccoli()">remove broccoli</button>
     <h1 style="color:rgb(3, 255, 188)">This text would be big</h1>
     <p>
         Some normal looking text
     </p>
-    <div class="partBroccoli moveBroccoli"></div>
+    <div class="partBroccoli moveBroccoli" id="broccoli"></div>
 </body>
 
 </html>
